@@ -1,5 +1,6 @@
+<?php include_once 'includes/connection.php'; ?>
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -69,18 +70,17 @@
                 <li class="chapter-item title-item">
                     <a>My Libraries</a>
                 </li>
+                <?php
+                
+                $libraries = $db->prepare("SELECT * FROM libraries");
+                $libraries->execute(array());
+                $get_libraries = $libraries->fetchAll(PDO::FETCH_ASSOC);
+
+                foreach($get_libraries as $row) { ?>
                 <li class="chapter-item">
-                    <a href="#">Library at Home</a>
+                    <a href="#"><?php echo $row["library_name"]; ?></a>
                 </li>
-                <li class="chapter-item">
-                    <a href="#">Big Library</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">Library at School</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">My Father's Library</a>
-                </li>
+                <?php } ?>
                 <li class="chapter-item title-item">
                     <a>Content</a>
                 </li>
