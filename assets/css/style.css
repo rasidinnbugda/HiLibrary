@@ -82,6 +82,37 @@ a {
   color: var(--first-color);
 }
 
+/* === Bootstrap: Cards === */
+.card {
+  border: none;
+  box-shadow: 0 0 8px 0 rgb(155 162 173 / 20%);
+  border-radius: 2px;
+}
+
+.card-header {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border-color);
+  padding: var(--mp-0-75) var(--mp-1);
+}
+
+.card .card-header .card-title {
+  margin-bottom: 0;
+  font-size: var(--f-0-875);
+  font-weight: var(--f-semibold);
+  color: var(--gray-700);
+}
+
+.card-body {
+  padding: var(--mp-1);
+  font-size: var(--f-0-75);
+  color: var(--gray-600);
+}
+
+/* === Bootstrap: Table === */
+.table tbody td {
+  color: var(--gray-600);
+}
+
 /* === Header === */
 header {
   height: 60px;
@@ -285,12 +316,11 @@ header .dropdown-menu .dropdown-item:hover:not(.active) {
 .sidebar .chapter-area {
   list-style: none;
   padding: 0 var(--mp-0-25);
-  margin-top: var(--mp-0-625);
   margin-bottom: 0;
   overflow-y: overlay;
   overflow-x: hidden;
   height: 100%;
-  max-height: calc(100% - 108px);
+  max-height: calc(100% - 60px);
 }
 
 .sidebar .chapter-area::-webkit-scrollbar {
@@ -348,4 +378,5 @@ main {
   min-height: calc(100vh - 60px);
   margin-left: 270px;
   padding: var(--mp-1) var(--mp-1-25);
+  background-color: #f6f8fa;
 }
