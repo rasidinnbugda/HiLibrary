@@ -19,14 +19,14 @@
     <header class="navbar sticky-top">
         <nav class="nav-content">
             <div class="me-auto d-flex align-items-center justify-content-center">
-                <a href="index.html" class="nav-brand me-2">
+                <a href="index.php" class="nav-brand me-2">
                     <img src="assets/img/HiDocs.svg" alt="HiDocs">
                 </a>
             </div>
             <ul class="navbar-menu d-flex align-items-center justify-content-center ms-auto">
                 <ul class="navbar-menu">
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">
+                        <a href="index.php" class="nav-link">
                             <span class="nav-text">
                                 Home
                             </span>
