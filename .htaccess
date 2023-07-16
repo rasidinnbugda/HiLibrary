@@ -1,0 +1,8 @@
+RewriteEngine ON
+
+Options -Indexes
+
+# Remove Extension
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php

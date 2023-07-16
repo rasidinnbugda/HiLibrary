@@ -17,87 +17,16 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="navbar sticky-top">
-        <nav class="nav-content">
-            <div class="me-auto d-flex align-items-center justify-content-center">
-                <a href="index.php" class="nav-brand me-2">
-                    <img src="assets/img/HiDocs.svg" alt="HiDocs">
-                </a>
-            </div>
-            <ul class="navbar-menu d-flex align-items-center justify-content-center ms-auto">
-                <ul class="navbar-menu">
-                    <li class="nav-item">
-                        <a href="index.php" class="nav-link">
-                            <span class="nav-text">
-                                Home
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span class="nav-text">
-                                Documentations
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <span class="nav-text">
-                                HiBlog
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item px-2 m-0 w-32">
-                        <span class="vr h-100"></span>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://github.com/rasidinnbugda/HiLibrary" target="_blank" class="nav-link">
-                            <span class="nav-text">
-                                <i class="bi bi-github"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </ul>
-        </nav>
-    </header>
+    <?php include('includes/header.php'); ?>
+    
     <!-- /Header -->
 
     <!-- Page Wrapper -->
     <div class="page-wrapper">
-        <aside class="sidebar">
-            <ul class="chapter-area">
-                <li class="chapter-item title-item">
-                    <a>My Libraries</a>
-                </li>
-                <?php
-                
-                $libraries = $db->prepare("SELECT * FROM libraries");
-                $libraries->execute(array());
-                $get_libraries = $libraries->fetchAll(PDO::FETCH_ASSOC);
-
-                foreach($get_libraries as $row) { ?>
-                <li class="chapter-item">
-                    <a href="#"><?php echo $row["library_name"]; ?></a>
-                </li>
-                <?php } ?>
-                <li class="chapter-item title-item">
-                    <a>Content</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">Setup HiBlog</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">Setup HiBlog</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">Setup HiBlog</a>
-                </li>
-                <li class="chapter-item">
-                    <a href="#">Setup HiBlog</a>
-                </li>
-            </ul>
-        </aside>
+        <!-- Sidebar -->
+        <?php include('includes/sidebar.php'); ?>
+        
+        <!-- /Sidebar -->
         <main>
             <div class="row g-4">
                 <div class="col-lg-8">

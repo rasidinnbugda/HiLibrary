@@ -210,7 +210,7 @@ header .dropdown-menu {
   width: max-content;
   box-shadow: 0 10px 40px 0 rgb(104 113 123 / 20%);
   border: 1px solid #e6e9ec;
-  border-radius: 8px;
+  border-radius: 2px;
   padding: var(--mp-0-375);
   overflow: hidden;
   margin-top: -10px;
@@ -228,7 +228,7 @@ header .dropdown-menu li:first-child {
 
 header .dropdown-menu .dropdown-item {
   font-size: 12px;
-  border-radius: 8px;
+  border-radius: 2px;
   color: var(--dark-rgb);
   transition: .3s all;
 }
@@ -243,7 +243,7 @@ header .dropdown-menu .dropdown-item.active {
 }
 
 header .dropdown-menu .dropdown-item:hover:not(.active) {
-  background-color: var(--first-color-disabled);
+  background-color: var(--gray-200);
 }
 
 @keyframes getDropdown {
