@@ -37,7 +37,7 @@
                             <h3 class="card-title">Admin Information</h3>
                         </div>
                         <div class="card-body">
-                            <form method="POST" enctype="multipart/form-data" action="apps/admin-settins.php">
+                            <form method="POST" enctype="multipart/form-data" action="apps/admin-settings.php">
                                 <div class="form-group mb-3">
                                     <label for="username">Username</label>
                                     <input type="text" class="form-control form-control-sm" id="username" name="admin_username" placeholder="Username.." value="<?php echo $get_admin_data["admin_username"]; ?>" autocomplete="off">
@@ -98,7 +98,13 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-            toastr.info('Are you the 6 fingered man?')
-        </script>
+        <?php if(isset($_SESSION["updateSuccess"])) { ?>
+        toastr.success('Changes saved successfully!')
+        <?php unset($_SESSION["updateSuccess"]); }elseif(isset($_SESSION["null"])) { ?>
+        toastr.warning('Please do not leave any blank spaces!')
+        <?php unset($_SESSION["null"]); }elseif(isset($_SESSION["error"])) { ?>
+        toastr.warning('An unexpected error has occurred!')
+        <?php unset($_SESSION["error"]); } ?>
+    </script>
 </body>
 </html>
