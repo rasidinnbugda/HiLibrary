@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Icon: Material Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- CSS: Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- CSS: style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
     <style>
@@ -50,15 +52,15 @@
                 <div class="card">
                     <div class="card-body">
                         <p>Fill in the information to log in.</p>
-                        <form action="">
+                        <form method="POST" enctype="multipart/form-data" action="apps/login-action.php">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Username">
+                                <input type="text" class="form-control" name="admin_username" placeholder="Username">
                             </div>
                             <div class="input-group mb-3">
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" name="admin_password" placeholder="Password">
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-sm btn-purple btn-block">Login</button>
+                                <button type="submit" name="loginAction" class="btn btn-sm btn-purple btn-block">Login</button>
                             </div>
                         </form>
                     </div>
@@ -67,9 +69,21 @@
         </div>
     </div>
 
+    <!-- JS: JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- JS: Bootstrap 5 -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- JS: Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- JS: script.js -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+        <?php if(isset($_SESSION["null"])) { ?>
+        toastr.warning('Please do not leave any blank spaces!')
+        <?php unset($_SESSION["null"]); }elseif(isset($_SESSION["error"])) { ?>
+        toastr.error('You entered the wrong username or password!')
+        <?php unset($_SESSION["error"]); } ?>
+    </script>
 </body>
 </html>

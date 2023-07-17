@@ -103,7 +103,7 @@
         <?php unset($_SESSION["updateSuccess"]); }elseif(isset($_SESSION["null"])) { ?>
         toastr.warning('Please do not leave any blank spaces!')
         <?php unset($_SESSION["null"]); }elseif(isset($_SESSION["error"])) { ?>
-        toastr.warning('An unexpected error has occurred!')
+        toastr.error('An unexpected error has occurred!')
         <?php unset($_SESSION["error"]); } ?>
     </script>
 </body>
