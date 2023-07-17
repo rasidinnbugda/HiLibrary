@@ -50,7 +50,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                <a href="apps/logout.php" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
                                     Log Out
                                 </a>
                             </li>

@@ -24,7 +24,7 @@ if(isset($loginAction)) {
 
         if($login) {
             $_SESSION["login"] = true;
-            $_SESSION["admin_username"] = "admin_username";
+            $_SESSION["admin_username"] = $login["admin_username"];
             $_SESSION["admin_id"] = $login["admin_id"];
 
             header("Location: ../index");

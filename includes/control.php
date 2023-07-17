@@ -1,6 +1,6 @@
 <?php
 
-if ($_SESSION["admin_username"] != "admin_username") {
+if ($_SESSION["admin_username"] != $get_admin_data["admin_username"]) {
 	header("Location: login");
 }
 
