@@ -1,4 +1,4 @@
-<?php include_once 'includes/connection.php'; ?>
+<?php include_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

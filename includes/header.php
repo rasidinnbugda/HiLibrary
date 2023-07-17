@@ -34,7 +34,7 @@
                     <li class="nav-item content-box">
                         <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="nav-text">
-                                Raşidin Buğda
+                                <?php echo $get_admin_data["admin_full_name"]; ?>
                             </span>
                             <i class="bi bi-person-fill dropdown-icon ms-2"></i>
                         </a>

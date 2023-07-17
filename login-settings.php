@@ -1,10 +1,4 @@
-<?php include_once 'includes/connection.php';
-
-$admin_data = $db->prepare("SELECT * FROM admin");
-$admin_data->execute(array());
-$get_admin_data = $admin_data->fetch(PDO::FETCH_ASSOC);
-
-?>
+<?php include_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +12,8 @@ $get_admin_data = $admin_data->fetch(PDO::FETCH_ASSOC);
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Icon: Material Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- CSS: Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!-- CSS: style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -41,21 +37,21 @@ $get_admin_data = $admin_data->fetch(PDO::FETCH_ASSOC);
                             <h3 class="card-title">Admin Information</h3>
                         </div>
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST" enctype="multipart/form-data" action="apps/admin-settins.php">
                                 <div class="form-group mb-3">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control form-control-sm" id="username" placeholder="Username.." value="<?php echo $get_admin_data["admin_username"]; ?>" autocomplete="off">
+                                    <input type="text" class="form-control form-control-sm" id="username" name="admin_username" placeholder="Username.." value="<?php echo $get_admin_data["admin_username"]; ?>" autocomplete="off">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="email">E-mail</label>
-                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="E-mail.." value="<?php echo $get_admin_data["admin_email"]; ?>" autocomplete="off">
+                                    <input type="email" class="form-control form-control-sm" id="email" name="admin_email" placeholder="E-mail.." value="<?php echo $get_admin_data["admin_email"]; ?>" autocomplete="off">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="email">Full Name</label>
-                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="Full Name.." value="<?php echo $get_admin_data["admin_full_name"]; ?>" autocomplete="off">
+                                    <input type="text" class="form-control form-control-sm" id="email" name="admin_full_name" placeholder="Full Name.." value="<?php echo $get_admin_data["admin_full_name"]; ?>" autocomplete="off">
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-sm btn-success btn-block"><i class="bi bi-pencil-square"></i> Save</button>
+                                    <button type="submit" name="adminInformationUpdate" class="btn btn-sm btn-success btn-block"><i class="bi bi-pencil-square"></i> Save</button>
                                 </div>
                             </form>
                         </div>
@@ -92,9 +88,17 @@ $get_admin_data = $admin_data->fetch(PDO::FETCH_ASSOC);
     </div>
     <!-- /Page Wrapper -->
 
+    <!-- JS: JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- JS: Bootstrap 5 -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- JS: Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <!-- JS: script.js -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+            toastr.info('Are you the 6 fingered man?')
+        </script>
 </body>
 </html>
