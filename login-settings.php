@@ -1,4 +1,4 @@
-<?php include_once 'includes/config.php'; ?>
+<?php include_once 'includes/config.php'; include 'includes/control.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

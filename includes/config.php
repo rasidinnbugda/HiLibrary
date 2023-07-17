@@ -2,6 +2,7 @@
 
 // Includes
 include_once 'connection.php';
+include 'control.php';
 
 // Admin Information
 $admin_data = $db->prepare("SELECT * FROM admin WHERE admin_id=?");
