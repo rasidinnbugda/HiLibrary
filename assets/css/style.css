@@ -130,6 +130,16 @@ a {
   width: 100%;
 }
 
+.btn-purple {
+  background-color: var(--first-color);
+  color: var(--white);
+}
+
+.btn-purple:hover {
+  background-color: rgba(149, 56, 158, 0.9);
+  color: var(--white);
+}
+
 /* === Header === */
 header {
   height: 60px;

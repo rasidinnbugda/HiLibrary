@@ -40,13 +40,13 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a href="#" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    User Information
+                                <a href="login-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    Login Settings
                                 </a>
                             </li>
                             <li>
                                 <a href="login-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    Login Settings
+                                    Logs
                                 </a>
                             </li>
                             <li>

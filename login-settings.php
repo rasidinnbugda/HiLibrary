@@ -1,4 +1,10 @@
-<?php include_once 'includes/connection.php'; ?>
+<?php include_once 'includes/connection.php';
+
+$admin_data = $db->prepare("SELECT * FROM admin");
+$admin_data->execute(array());
+$get_admin_data = $admin_data->fetch(PDO::FETCH_ASSOC);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,17 +38,21 @@
                 <div class="col-lg-6">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Username & E-mail</h3>
+                            <h3 class="card-title">Admin Information</h3>
                         </div>
                         <div class="card-body">
                             <form action="">
                                 <div class="form-group mb-3">
                                     <label for="username">Username</label>
-                                    <input type="text" class="form-control form-control-sm" id="username" placeholder="Username" autocomplete="off">
+                                    <input type="text" class="form-control form-control-sm" id="username" placeholder="Username.." value="<?php echo $get_admin_data["admin_username"]; ?>" autocomplete="off">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="email">E-mail</label>
-                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="E-mail" autocomplete="off">
+                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="E-mail.." value="<?php echo $get_admin_data["admin_email"]; ?>" autocomplete="off">
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label for="email">Full Name</label>
+                                    <input type="email" class="form-control form-control-sm" id="email" placeholder="Full Name.." value="<?php echo $get_admin_data["admin_full_name"]; ?>" autocomplete="off">
                                 </div>
                                 <div class="col-12">
                                     <button class="btn btn-sm btn-success btn-block"><i class="bi bi-pencil-square"></i> Save</button>

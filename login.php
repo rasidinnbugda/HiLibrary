@@ -34,11 +34,6 @@
             font-size: 14px;
         }
 
-        .btn-block:hover {
-            background-color: rgba(150, 56, 158, 0.9);
-            color: #fff;
-        }
-
         p {
             margin-bottom: 16px;
             text-align: center;
@@ -63,7 +58,7 @@
                                 <input type="password" class="form-control" placeholder="Password">
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-sm btn-block">Login</button>
+                                <button class="btn btn-sm btn-purple btn-block">Login</button>
                             </div>
                         </form>
                     </div>
