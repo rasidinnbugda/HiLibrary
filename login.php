@@ -34,20 +34,6 @@
             font-size: 14px;
         }
 
-        .btn,.form-control {
-            font-size: 12px;
-        }
-
-        .form-control:focus {
-            box-shadow: none;
-        }
-        
-        .btn-block {
-            width: 100%;
-            background-color: rgb(149, 56, 158);
-            color: #fff;
-        }
-
         .btn-block:hover {
             background-color: rgba(150, 56, 158, 0.9);
             color: #fff;
@@ -71,10 +57,10 @@
                         <p>Fill in the information to log in.</p>
                         <form action="">
                             <div class="input-group mb-3">
-                                <input type="text" class="form-control form-control-sm" placeholder="Username">
+                                <input type="text" class="form-control" placeholder="Username">
                             </div>
                             <div class="input-group mb-3">
-                                <input type="password" class="form-control form-control-sm" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Password">
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-sm btn-block">Login</button>

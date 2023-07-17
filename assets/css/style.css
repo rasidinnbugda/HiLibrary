@@ -113,6 +113,23 @@ a {
   color: var(--gray-600);
 }
 
+.table tbody td a:hover {
+  text-decoration: underline;
+}
+
+/* === Bootstrap: Forms === */
+.btn,.form-control {
+  font-size: 12px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.btn-block {
+  width: 100%;
+}
+
 /* === Header === */
 header {
   height: 60px;
