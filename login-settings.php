@@ -37,7 +37,7 @@
                             <h3 class="card-title">Admin Information</h3>
                         </div>
                         <div class="card-body">
-                            <form method="POST" enctype="multipart/form-data" action="apps/admin-settings.php">
+                            <form method="POST" action="apps/admin-settings.php">
                                 <div class="form-group mb-3">
                                     <label for="username">Username</label>
                                     <input type="text" class="form-control form-control-sm" id="username" name="admin_username" placeholder="Username.." value="<?php echo $get_admin_data["admin_username"]; ?>" autocomplete="off">
@@ -63,21 +63,21 @@
                             <h3 class="card-title">Change Password</h3>
                         </div>
                         <div class="card-body">
-                            <form action="">
+                            <form method="POST" action="apps/admin-settings.php">
                                 <div class="form-group mb-3">
                                     <label for="old-password">Old Passord</label>
-                                    <input type="password" class="form-control form-control-sm" id="old-password" autocomplete="off">
+                                    <input type="password" class="form-control form-control-sm" id="old-password" name="old_password" autocomplete="off">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="new-password">New Passord</label>
-                                    <input type="password" class="form-control form-control-sm" id="new-password" autocomplete="off">
+                                    <input type="password" class="form-control form-control-sm" id="new-password" name="new_password" autocomplete="off">
                                 </div>
                                 <div class="form-group mb-3">
                                     <label for="retype-new-password">Retype New Passord</label>
-                                    <input type="password" class="form-control form-control-sm" id="retype-new-password" autocomplete="off">
+                                    <input type="password" class="form-control form-control-sm" id="retype-new-password" name="retype_new_password" autocomplete="off">
                                 </div>
                                 <div class="col-12">
-                                    <button class="btn btn-sm btn-success btn-block"><i class="bi bi-pencil-square"></i> Save</button>
+                                    <button type="submit" name="changePassword" class="btn btn-sm btn-success btn-block"><i class="bi bi-pencil-square"></i> Save</button>
                                 </div>
                             </form>
                         </div>
@@ -104,7 +104,13 @@
         toastr.warning('Please do not leave any blank spaces!')
         <?php unset($_SESSION["null"]); }elseif(isset($_SESSION["error"])) { ?>
         toastr.error('An unexpected error has occurred!')
-        <?php unset($_SESSION["error"]); } ?>
+        <?php unset($_SESSION["error"]); }elseif(isset($_SESSION["changeSuccess"])) { ?>
+        toastr.success('Password changed successfully!')
+        <?php unset($_SESSION["changeSuccess"]); }elseif(isset($_SESSION["mismatchedPasswords"])) { ?>
+        toastr.warning('New passwords do not match each other!')
+        <?php unset($_SESSION["mismatchedPasswords"]); }elseif(isset($_SESSION["wrongOldPassword"])) { ?>
+        toastr.warning('The old password is incorrect!')
+        <?php unset($_SESSION["wrongOldPassword"]); } ?>
     </script>
 </body>
 </html>

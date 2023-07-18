@@ -1,3 +1,9 @@
+<?php 
+if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
+    header("Location: ../");
+    exit();
+}
+?>
 <aside class="sidebar">
             <ul class="chapter-area">
                 <li class="chapter-item title-item">

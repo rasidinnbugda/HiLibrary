@@ -20,7 +20,7 @@ function replace_url($text) {
 function control() {
 	if (empty($_SESSION["admin_username"])) {
 		
-		header("Location: index");
+		header("Location: ../");
 		exit;
 	}
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page | HiLibrary</title>
+    <title>Login | HiLibrary</title>
     <!-- CSS: Bootstrap 5 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font: Inter -->
