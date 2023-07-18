@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>Libraries | HiLibrary</title>
     <!-- CSS: Bootstrap 5 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font: Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Icon: Material Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <!-- CSS: Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <!-- CSS: DataTables -->
+    <link rel="stylesheet" href="assets/css/datatables.min.css">
     <!-- CSS: style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -66,7 +70,7 @@
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table">
+                                <table id="deneme" class="table">
                                     <thead>
                                         <tr>
                                             <td style="width: 20px;">#</td>
@@ -111,9 +115,29 @@
     </div>
     <!-- /Page Wrapper -->
 
+    <!-- JS: JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <!-- JS: Bootstrap 5 -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- JS: Toastr -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <!-- JS: DataTables -->
+    <script src="assets/js/datatables.min.js"></script>
     <!-- JS: script.js -->
     <script src="assets/js/script.js"></script>
+
+    <script>
+       $(document).ready(function() {
+    $('#deneme').DataTable( {
+        "language": {
+            "lengthMenu": "Her sayfada _MENU_ kayıt gösteriliyor",
+            "zeroRecords": "Nothing found - sorry",
+            "info": "Showing page _PAGE_ of _PAGES_",
+            "infoEmpty": "No records available",
+            "infoFiltered": "(filtered from _MAX_ total records)"
+        }
+    } );
+} );
+    </script>
 </body>
 </html>

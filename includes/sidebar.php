@@ -21,10 +21,10 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                 </li>
                 <?php } ?>
                 <li class="chapter-item title-item">
-                    <a>Content</a>
+                    <a>Management</a>
                 </li>
                 <li class="chapter-item">
-                    <a href="#">Setup HiBlog</a>
+                    <a href="libraries">Libraries</a>
                 </li>
                 <li class="chapter-item">
                     <a href="#">Setup HiBlog</a>
