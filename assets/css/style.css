@@ -102,6 +102,11 @@ a {
   color: var(--gray-700);
 }
 
+.card .card-header .btn-sm {
+  font-size: 11px;
+  padding: 2px var(--mp-0-25);
+}
+
 .card-body {
   padding: var(--mp-1);
   font-size: var(--f-0-75);
@@ -150,6 +155,8 @@ a {
 
 .pagination .paginate_button.active a.page-link {
   color: var(--white);
+  background-color: var(--first-color);
+  border-color: var(--first-color);
 }
 
 .btn-block {

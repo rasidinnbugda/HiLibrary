@@ -35,12 +35,13 @@
             <div class="row g-4">
                 <div class="col-lg-12">
                     <div class="card h-100">
-                        <div class="card-header">
-                            <h3 class="card-title">Libraries</h3>
+                        <div class="card-header d-flex align-items-center justify-content-between">
+                            <h3 class="card-title d-inline-block">Libraries</h3>
+                            <a href="#" class="btn btn-sm btn-success ms-2"><i class="bi bi-plus"></i> Add Library</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="deneme" class="table">
+                                <table id="dataTable" class="table">
                                     <thead>
                                         <tr>
                                             <td style="width: 20px;">#</td>
@@ -133,7 +134,7 @@
 
     <script>
     $(document).ready(function() {
-        $('#deneme').DataTable( {
+        $('#dataTable').DataTable( {
             "language": {
                 "lengthMenu": "Show _MENU_ entries",
                 "zeroRecords": "Nothing found - sorry",
