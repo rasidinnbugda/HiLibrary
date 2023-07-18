@@ -1,3 +1,9 @@
+<?php 
+if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
+    header("Location: ../");
+    exit();
+}
+?>
 <header class="navbar sticky-top">
         <nav class="nav-content">
             <div class="me-auto d-flex align-items-center justify-content-center">
