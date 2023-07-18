@@ -50,66 +50,21 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php
+                                        
+                                        $libraries = $db->prepare("SELECT * FROM libraries");
+                                        $libraries->execute(array());
+                                        $get_libraries = $libraries->fetchAll(PDO::FETCH_ASSOC);
+
+                                        foreach ($get_libraries as $row) { ?>
+                                        
                                         <tr>
                                             <td>1</td>
                                             <td>Library at Home</td>
                                             <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Big Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Library at School</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>My Father's Library</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
-                                        </tr>
+                                        <?php } ?>
+                                        
                                     </tbody>
                                 </table>
                             </div>

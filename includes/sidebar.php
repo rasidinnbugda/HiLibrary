@@ -16,10 +16,11 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                 $get_libraries = $libraries->fetchAll(PDO::FETCH_ASSOC);
 
                 foreach($get_libraries as $row) { ?>
-                <li class="chapter-item">
+<li class="chapter-item">
                     <a href="#"><?php echo $row["library_name"]; ?></a>
                 </li>
                 <?php } ?>
+
                 <li class="chapter-item title-item">
                     <a>Management</a>
                 </li>
