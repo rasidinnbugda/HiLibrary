@@ -33,37 +33,7 @@
         <!-- /Sidebar -->
         <main>
             <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="text-center mb-1">14566</h3>
-                            <p class="text-center mb-0">Registered Book</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="text-center mb-1">926</h3>
-                            <p class="text-center mb-0">Registered Member</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            a
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            a
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <div class="card h-100">
                         <div class="card-header">
                             <h3 class="card-title">Libraries</h3>
@@ -99,15 +69,50 @@
                                             <td>My Father's Library</td>
                                             <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
                                         </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>My Father's Library</td>
+                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card h-100">
-                        aa
                     </div>
                 </div>
             </div>
@@ -127,17 +132,18 @@
     <script src="assets/js/script.js"></script>
 
     <script>
-       $(document).ready(function() {
-    $('#deneme').DataTable( {
-        "language": {
-            "lengthMenu": "Her sayfada _MENU_ kayıt gösteriliyor",
-            "zeroRecords": "Nothing found - sorry",
-            "info": "Showing page _PAGE_ of _PAGES_",
-            "infoEmpty": "No records available",
-            "infoFiltered": "(filtered from _MAX_ total records)"
-        }
+    $(document).ready(function() {
+        $('#deneme').DataTable( {
+            "language": {
+                "lengthMenu": "Show _MENU_ entries",
+                "zeroRecords": "Nothing found - sorry",
+                "info": "Showing page _PAGE_ of _PAGES_",
+                "infoEmpty": "No records available",
+                "infoFiltered": "(filtered from _MAX_ total records)",
+                "search": "Search:"
+            }
+        } );
     } );
-} );
     </script>
 </body>
 </html>

@@ -119,11 +119,37 @@ a {
 
 /* === Bootstrap: Forms === */
 .btn,.form-control {
-  font-size: 12px;
+  font-size: var(--f-0-75);
 }
 
 .form-control:focus {
   box-shadow: none;
+}
+
+.form-select {
+  font-size: 11px;
+  color: var(--gray-600);
+}
+
+.form-select:focus {
+  box-shadow: none;
+}
+
+.pagination .paginate_button a.page-link:focus {
+  box-shadow: none;
+}
+
+.pagination .paginate_button a.page-link {
+  font-size: 11px;
+  color: var(--first-color);
+}
+
+.pagination .paginate_button.disabled a.page-link {
+  color: var(--gray-600);
+}
+
+.pagination .paginate_button.active a.page-link {
+  color: var(--white);
 }
 
 .btn-block {
