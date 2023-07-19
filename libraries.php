@@ -64,8 +64,8 @@
                                             <td><?php echo $i; ?></td>
                                             <td><?php echo $row["library_name"]; ?></td>
                                             <td>
-                                                <a href="library-edit?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-success"><i class="bi bi-pencil-fill"></i> Edit</a>
-                                                <a href="apps/library-delete?library_delete_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</a>
+                                                <a href="library-edit?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-primary"><i class="bi bi-cpu"></i> Manage</a>
+                                                <a href="apps/library.php?library_delete_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</a>
                                             </td>
                                         </tr>
                                         <?php $i++; } ?>
@@ -116,11 +116,9 @@
         toastr.error('An unexpected error has occurred!')
         <?php unset($_SESSION["error"]); }elseif(isset($_SESSION["addSuccess"])) { ?>
         toastr.success('Library successfully added!')
-        <?php unset($_SESSION["addSuccess"]); }elseif(isset($_SESSION["mismatchedPasswords"])) { ?>
-        toastr.warning('New passwords do not match each other!')
-        <?php unset($_SESSION["mismatchedPasswords"]); }elseif(isset($_SESSION["wrongOldPassword"])) { ?>
-        toastr.warning('The old password is incorrect!')
-        <?php unset($_SESSION["wrongOldPassword"]); } ?>
+        <?php unset($_SESSION["addSuccess"]); }elseif(isset($_SESSION["deleteSuccess"])) { ?>
+        toastr.success('Library successfully deleted!')
+        <?php unset($_SESSION["deleteSuccess"]); } ?>
     </script>
 </body>
 </html>

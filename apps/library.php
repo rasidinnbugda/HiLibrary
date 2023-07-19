@@ -32,4 +32,22 @@ if(isset($addLibrary)) {
     }
 }
 
+// Edit Library
+
+// Delete Library
+$library_delete_id = $_GET["library_delete_id"];
+if(isset($library_delete_id)) {
+
+    $deletedLibrary = $db->prepare("DELETE FROM libraries WHERE library_id=?");
+    $deleteAction = $deletedLibrary->execute(array($library_delete_id));
+
+    if ($deleteAction) {
+        header("Location: ../libraries");
+        $_SESSION["deleteSuccess"] = "deleteSuccess";
+    }else{
+        header("Location: ../libraries");
+        $_SESSION["error"] = "error";
+    }
+}
+
 ?>
