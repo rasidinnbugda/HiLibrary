@@ -449,3 +449,31 @@ main {
   padding: var(--mp-1) var(--mp-1-25);
   background-color: #f6f8fa;
 }
+
+/* === App Box === */
+.card .app-box {
+  width: 96px;
+  height: 96px;
+  border: 2px solid var(--border-color);
+  border-radius: 2px;
+  margin: var(--mp-0-25);
+  color: var(--gray-600);
+  transition: .3s all;
+}
+
+.card .app-box:hover {
+  background-color: var(--gray-200);
+}
+
+.card .app-box .app-icon {
+  font-size: 28px;
+  margin-bottom: var(--mp-0-25);
+  margin-top: var(--mp-0-25);
+}
+
+.card .app-box .app-title {
+  font-size: 11px;
+  text-align: center;
+  margin: 0;
+  padding: 0 var(--mp-0-25);
+}
