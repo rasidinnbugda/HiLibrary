@@ -118,8 +118,17 @@ a {
   color: var(--gray-600);
 }
 
-.table tbody td a:hover {
+.table tbody td a.link-button:hover {
   text-decoration: underline;
+}
+
+.table.data-table {
+  width: 100%!important;
+}
+
+.table tbody td .btn-sm {
+  font-size: var(--f-0-625);
+  padding: 2px var(--mp-0-25);
 }
 
 /* === Bootstrap: Forms === */

@@ -39,15 +39,13 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                     </li>
                     <li class="nav-item content-box">
                         <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="nav-text">
-                                <?php echo $get_admin_data["admin_full_name"]; ?>
-                            </span>
+                            <span class="nav-text"><?php echo $get_admin_data["admin_full_name"]; ?></span>
                             <i class="bi bi-person-fill dropdown-icon ms-2"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
-                                <a href="login-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    Login Settings
+                                <a href="admin-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    Admin Settings
                                 </a>
                             </li>
                             <li>

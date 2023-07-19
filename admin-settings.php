@@ -1,11 +1,11 @@
-<?php include_once 'includes/config.php'; include 'includes/control.php'; ?>
+<?php include_once 'includes/config.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library</title>
+    <title>Admin Settings | HiLibrary</title>
     <!-- CSS: Bootstrap 5 -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Font: Inter -->

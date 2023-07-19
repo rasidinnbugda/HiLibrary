@@ -37,16 +37,16 @@
                     <div class="card h-100">
                         <div class="card-header d-flex align-items-center justify-content-between">
                             <h3 class="card-title d-inline-block">Libraries</h3>
-                            <a href="#" class="btn btn-sm btn-success ms-2"><i class="bi bi-plus"></i> Add Library</a>
+                            <a href="add-library" class="btn btn-sm btn-success ms-2"><i class="bi bi-plus"></i> Add Library</a>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table id="dataTable" class="table">
+                                <table id="dataTable" class="table data-table">
                                     <thead>
                                         <tr>
-                                            <td style="width: 20px;">#</td>
+                                            <td style="width: 25px">#</td>
                                             <td>Library Name</td>
-                                            <td style="width: 150px;">Process</td>
+                                            <td style="width: 200px">Process</td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -56,15 +56,20 @@
                                         $libraries->execute(array());
                                         $get_libraries = $libraries->fetchAll(PDO::FETCH_ASSOC);
 
+                                        $i = 1;
+
                                         foreach ($get_libraries as $row) { ?>
                                         
                                         <tr>
-                                            <td>1</td>
-                                            <td>Library at Home</td>
-                                            <td><a href="#" class="link-button"><i class="bi bi-eye-fill"></i> View</a></td>
+                                            <td><?php echo $i; ?></td>
+                                            <td><?php echo $row["library_name"]; ?></td>
+                                            <td>
+                                                <a href="library-edit?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-success"><i class="bi bi-pencil-fill"></i> Edit</a>
+                                                <a href="apps/library-delete?library_delete_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</a>
+                                            </td>
                                         </tr>
-                                        <?php } ?>
-                                        
+                                        <?php $i++; } ?>
+
                                     </tbody>
                                 </table>
                             </div>
@@ -100,6 +105,22 @@
             }
         } );
     } );
+    </script>
+
+    <script>
+        <?php if(isset($_SESSION["updateSuccess"])) { ?>
+        toastr.success('Changes saved successfully!')
+        <?php unset($_SESSION["updateSuccess"]); }elseif(isset($_SESSION["null"])) { ?>
+        toastr.warning('Please fill in the required fields (*)!')
+        <?php unset($_SESSION["null"]); }elseif(isset($_SESSION["error"])) { ?>
+        toastr.error('An unexpected error has occurred!')
+        <?php unset($_SESSION["error"]); }elseif(isset($_SESSION["addSuccess"])) { ?>
+        toastr.success('Library successfully added!')
+        <?php unset($_SESSION["addSuccess"]); }elseif(isset($_SESSION["mismatchedPasswords"])) { ?>
+        toastr.warning('New passwords do not match each other!')
+        <?php unset($_SESSION["mismatchedPasswords"]); }elseif(isset($_SESSION["wrongOldPassword"])) { ?>
+        toastr.warning('The old password is incorrect!')
+        <?php unset($_SESSION["wrongOldPassword"]); } ?>
     </script>
 </body>
 </html>
