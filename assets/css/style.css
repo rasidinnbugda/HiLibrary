@@ -452,17 +452,22 @@ main {
 
 /* === App Box === */
 .card .app-box {
+  position: relative;
   width: 96px;
   height: 96px;
   border: 2px solid var(--border-color);
   border-radius: 2px;
-  margin: var(--mp-0-25);
+  margin: var(--mp-0-375);
   color: var(--gray-600);
   transition: .3s all;
 }
 
 .card .app-box:hover {
   background-color: var(--gray-200);
+}
+
+.card .app-box.disabled {
+  background-color: var(--gray-100);
 }
 
 .card .app-box .app-icon {
@@ -476,4 +481,44 @@ main {
   text-align: center;
   margin: 0;
   padding: 0 var(--mp-0-25);
+}
+
+.card .ribbon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 84px;
+  height: 20px;
+  top: 4px;
+  left: -8px;
+  background-color: var(--first-color);
+  color: var(--white);
+  font-size: var(--f-0-625);
+  border-radius: 10px 10px 10px 0;
+}
+
+.card .ribbon::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 7px;
+  height: 10px;
+  background-color: rgb(109, 40, 116);
+  border-radius: 10px 0px 0px 10px;
+  z-index: 2;
+}
+
+.card .ribbon::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 7px;
+  height: 10px;
+  background-color: var(--first-color);
+  border-radius: 0 0 0 10px;
+}
+
+.card .ribbon p {
+  margin: 0;
+  margin-left: var(--mp-0-75);
 }

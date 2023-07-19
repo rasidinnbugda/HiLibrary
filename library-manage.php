@@ -38,17 +38,20 @@
                                     <i class="bi bi-journal-bookmark-fill app-icon"></i>
                                     <h4 class="app-title">Library Information</h4>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-images app-icon"></i>
                                     <h4 class="app-title">Library Album</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-hash app-icon"></i>
                                     <h4 class="app-title">Social Media Manager</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-megaphone-fill app-icon"></i>
                                     <h4 class="app-title">Announcement Manager</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
                                 <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
                                     <i class="bi bi-book-half app-icon"></i>
@@ -62,17 +65,20 @@
                                     <i class="bi bi-bookshelf app-icon"></i>
                                     <h4 class="app-title">Bookshelves</h4>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-file-richtext app-icon"></i>
                                     <h4 class="app-title">e-Book Manager</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-people-fill app-icon"></i>
                                     <h4 class="app-title">Membership Manager</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
-                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column disabled">
                                     <i class="bi bi-envelope-fill app-icon"></i>
                                     <h4 class="app-title">Message Manager</h4>
+                                    <span class="ribbon"><p>Coming soon</p></span>
                                 </a>
                                 <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
                                     <i class="bi bi-database-fill app-icon"></i>
