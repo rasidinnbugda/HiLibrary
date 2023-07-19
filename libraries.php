@@ -65,9 +65,26 @@
                                             <td><?php echo $row["library_name"]; ?></td>
                                             <td>
                                                 <a href="library-edit?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-primary"><i class="bi bi-cpu"></i> Manage</a>
-                                                <a href="apps/library.php?library_delete_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</a>
+                                                <button data-bs-toggle="modal" data-bs-target="#<?php echo "modal-".$row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</button>
                                             </td>
                                         </tr>
+                                        <div class="modal fade" id="<?php echo "modal-".$row["library_id"]; ?>" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h3 class="modal-title fs-5" id="staticBackdropLabel">Delete Library "<?php echo $row["library_name"]; ?>"</h3>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>You need to know that this action cannot be undone. Everything in this library (books, members, etc.) can be completely deleted. Make sure you have a database backup.</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-sm btn-secondary" data-bs-dismiss="modal">Cancel Operation</button>
+                                                    <a href="apps/library?library_delete_id=<?php echo $row["library_id"]; ?>" type="button" class="btn btn-sm btn-danger"><i class="bi bi-trash"></i> Delete Library</a>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <?php $i++; } ?>
 
                                     </tbody>
