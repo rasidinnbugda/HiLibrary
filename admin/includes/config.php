@@ -1,8 +1,5 @@
 <?php
 
-ob_start();
-session_start();
-
 // Includes
 include_once 'connection.php';
 
