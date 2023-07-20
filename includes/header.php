@@ -16,14 +16,14 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                     <li class="nav-item">
                         <a href="index" class="nav-link">
                             <span class="nav-text">
-                                Home
+                                <?php echo $lang["home"] ?>
                             </span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <span class="nav-text">
-                                Documentations
+                                <?php echo $lang["documentations"]; ?>
                             </span>
                         </a>
                     </li>
@@ -45,17 +45,35 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li>
                                 <a href="admin-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    Admin Settings
+                                    <?php echo $lang["userMenu1"]; ?>
                                 </a>
                             </li>
                             <li>
                                 <a href="login-settings" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    Logs
+                                    <?php echo $lang["userMenu2"]; ?>
                                 </a>
                             </li>
                             <li>
                                 <a href="apps/logout.php" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
-                                    Log Out
+                                    <?php echo $lang["userMenu3"]; ?>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item content-box">
+                        <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="nav-text"><?php echo $lang["language"]; ?></span>
+                            <i class="bi bi-translate dropdown-icon ms-2"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a href="?lang=en" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    <?php echo $lang["en"]; ?>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="?lang=tr" class="dropdown-item p-2 d-flex align-items-center justify-content-start">
+                                    <?php echo $lang["tr"]; ?>
                                 </a>
                             </li>
                         </ul>

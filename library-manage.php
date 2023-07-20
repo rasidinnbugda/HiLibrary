@@ -84,6 +84,10 @@
                                     <i class="bi bi-database-fill app-icon"></i>
                                     <h4 class="app-title">Database Operations</h4>
                                 </a>
+                                <a href="#" class="app-box d-flex align-items-center justify-content-start flex-column">
+                                    <i class="bi bi-gear-fill app-icon"></i>
+                                    <h4 class="app-title">Library Settings</h4>
+                                </a>
                             </div>
                         </div>
                     </div>

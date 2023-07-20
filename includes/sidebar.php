@@ -7,7 +7,7 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
 <aside class="sidebar">
             <ul class="chapter-area">
                 <li class="chapter-item title-item">
-                    <a>My Libraries</a>
+                    <a><?php echo $lang["myLibraries"] ?></a>
                 </li>
                 <?php
                 
@@ -22,10 +22,10 @@ if(basename($_SERVER['PHP_SELF'])==basename(__FILE__)){
                 <?php } ?>
 
                 <li class="chapter-item title-item">
-                    <a>Management</a>
+                    <a><?php echo $lang["management"] ?></a>
                 </li>
                 <li class="chapter-item">
-                    <a href="libraries">Libraries</a>
+                    <a href="libraries"><?php echo $lang["listElement1"] ?></a>
                 </li>
                 <li class="chapter-item">
                     <a href="#">Setup HiBlog</a>
