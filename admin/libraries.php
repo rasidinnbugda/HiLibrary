@@ -64,7 +64,7 @@
                                             <td><?php echo $i; ?></td>
                                             <td><?php echo $row["library_name"]; ?></td>
                                             <td>
-                                                <a href="library-edit?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-primary"><i class="bi bi-cpu"></i> Manage</a>
+                                                <a href="library-manage?library_id=<?php echo $row["library_id"]; ?>" class="btn btn-sm btn-primary"><i class="bi bi-cpu"></i> Manage</a>
                                                 <button data-bs-toggle="modal" data-bs-target="#<?php echo "modal-".$row["library_id"]; ?>" class="btn btn-sm btn-danger ms-2"><i class="bi bi-trash"></i> Delete</button>
                                             </td>
                                         </tr>
